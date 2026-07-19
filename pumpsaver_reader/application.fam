@@ -1,0 +1,16 @@
+# For details & more options, see documentation/AppManifests.md in the firmware repo.
+# Build/run with ufbt: `ufbt launch APPID=pumpsaver_reader`
+
+App(
+    appid="pumpsaver_reader",  # Must be unique
+    name="PumpSaver Reader",  # Displayed in menus
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="pumpsaver_reader_app_main",
+    stack_size=3 * 1024,
+    fap_category="GPIO",
+    fap_version="0.1",
+    fap_icon="icons/app.png",  # 10x10 1-bit PNG
+    fap_description="Reads the baseband IR broadcast of a SymCom/Littelfuse PumpSaver Plus pump relay via an external phototransistor on a GPIO pin.",
+    fap_author="Jeff (scaffold drafted with Claude)",
+    fap_icon_assets="icons",  # Image assets to compile for this application
+)
