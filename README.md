@@ -1,10 +1,11 @@
 # PumpSaver Plus — Flipper Zero Reader
 
-Portable/handheld companion to the working ESP32 + Hubitat monitor: a Flipper Zero FAP that
-decodes the SymCom/Littelfuse PumpSaver Plus baseband IR broadcast live, on-device.
-
-This displays all data broadcast by the pump protection relay - power consumption, settings, faults
-and history.
+A Flipper Zero FAP that decodes and displays the IR diagnostic data from the 
+SymCom/Littelfuse PumpSaver Plus well pump protection device.  This displays 
+all data broadcast by the pump protection relay - power consumption, settings, 
+faults and fault history.  It requires a single IR phototransistor connected
+between C0 (pin 16) and GND (pin 18) - the flipper's built in IR doesn't work
+for this application.
 
 Protocol reference: [lizbit-official/pumpsaver-ir-protocol](https://github.com/lizbit-official/pumpsaver-ir-protocol)
 (PROTOCOL.md is the spec this whole project is built against).
